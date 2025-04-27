@@ -3,9 +3,6 @@
 
 LifeOS is a comprehensive life management application that helps you track tasks, habits, goals, and maintain a journal. Built with React, TypeScript, and modern web technologies.
 
-## Live Demo
-
-**URL**: https://lovable.dev/projects/75729d03-d452-4321-9fea-a1d9e2a93a2c
 
 ## Features
 
