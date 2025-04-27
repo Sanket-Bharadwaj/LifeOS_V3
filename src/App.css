@@ -1,0 +1,186 @@
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+}
+
+/* Component transitions */
+.greeting-text {
+  animation: fadeIn 0.6s ease-out;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Glass card styling */
+.glass-card {
+  animation: scaleIn 0.5s ease-out;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button animations */
+button {
+  transition: all 0.2s ease !important;
+}
+
+button:active {
+  transform: scale(0.97) !important;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .screen-container {
+    padding-bottom: 5rem;
+  }
+  
+  /* Push content down to make buttons reachable with one hand */
+  .section-title,
+  .greeting-text,
+  form,
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Make bottom UI elements more accessible for one-handed operation */
+  button, 
+  .mobile-nav {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Ensure touch targets are large enough */
+  button,
+  input,
+  select,
+  .clickable {
+    min-height: 2.75rem;
+    touch-action: manipulation;
+  }
+}
+
+/* Root element styling */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}

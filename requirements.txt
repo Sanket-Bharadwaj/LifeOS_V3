@@ -1,0 +1,46 @@
+
+# Node.js and npm versions
+node>=18.0.0
+npm>=8.0.0
+
+# Core Dependencies
+react@^18.3.1
+react-dom@^18.3.1
+typescript@^5.0.0
+vite@^5.0.0
+
+# Routing
+react-router-dom@^6.26.2
+
+# State Management & Data Fetching
+@tanstack/react-query@^5.56.2
+
+# UI Components & Styling
+tailwindcss@^3.3.0
+@radix-ui/react-alert-dialog@^1.1.1
+@radix-ui/react-dialog@^1.1.2
+@radix-ui/react-select@^2.1.1
+@radix-ui/react-tabs@^1.1.0
+@radix-ui/react-toast@^1.2.1
+class-variance-authority@^0.7.1
+clsx@^2.1.1
+lucide-react@^0.462.0
+
+# Forms & Validation
+react-hook-form@^7.53.0
+zod@^3.23.8
+
+# Date & Time
+date-fns@^3.6.0
+
+# Charts & Visualization
+recharts@^2.12.7
+
+# Additional UI Utilities
+tailwind-merge@^2.5.2
+tailwindcss-animate@^1.0.7
+
+# Development Dependencies
+@types/react@^18.2.0
+@types/react-dom@^18.2.0
+@vitejs/plugin-react-swc@^3.0.0
